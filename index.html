@@ -10,8 +10,16 @@
 </head>
 <body>
     <header class="header">
-        <img src="res/icon.png" alt="Logo du site" />
-        <nav>
+         <img src="res/icon.png" alt="Logo du site">
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <nav id="nav-menu" class="nav-menu">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#services">NOS SERVICES</a></li>
@@ -42,5 +50,15 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, eius. Porro ducimus explicabo cum placeat ex quae enim odit harum!</p>
         </div>
     </section>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>

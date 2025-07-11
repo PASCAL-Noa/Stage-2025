@@ -16,6 +16,44 @@ h1, h2, h3,
 }
 
 /* === Header === */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #f6f6f6;
+    margin-bottom: 3px;
+    border-radius: 1px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+
+.nav-menu {
+    display: flex;
+}
+
+
 .header {
     background-color: #2D082A;
     display: flex;
@@ -23,6 +61,7 @@ h1, h2, h3,
     justify-content: space-evenly;
     padding: 20px 40px;
     height: 120px;
+    flex-wrap: wrap;
 }
 
 .header img {
@@ -129,3 +168,115 @@ h1, h2, h3,
     max-width: 800px;
     margin-top: -40px;
 }
+
+/* === Responsive tablette (≤ 1024px) === */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .header a {
+        font-size: 20px;
+    }
+
+    .title-a h1 {
+        font-size: 48px;
+        padding: 16px 32px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+
+    .studio-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+    .title-b h3 {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        padding: 32px;
+    }
+}
+
+/* === Responsive mobile (≤ 768px) === */
+@media (max-width: 768px) {
+    .intro {
+        padding: 60px 16px;
+        gap: 24px;
+    }
+
+    .title-a h1 {
+        font-size: 36px;
+        padding: 12px 24px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .studio-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .title-b h3 {
+        font-size: 18px;
+        padding: 0 16px;
+    }
+
+    .description {
+        font-size: 14px;
+        padding: 24px;
+        margin-top: -20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .header img {
+        height: 60px;
+    }
+
+    .header a {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+}
+
+
