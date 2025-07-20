@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LE STUDIO</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Manrope:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="../res/icon.png" alt="Logo RCN Studio" />
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menu principal">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="#studio">Le Studio</a></li>
+                <li><a href="#services">Nos Services</a></li>
+                <li><a href="#enregistrement">Enregistrement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="home" aria-labelledby="title-rcn">
+            <div class="title-a">
+                <h1 id="title-rcn">LE STUDIO</h1>
+            </div>
+
+            <div class="title-b">
+                <p>
+                    Plongez dans l'ambiance unique de notre studio, où chaque espace a été pensé pour la création : 
+                    une cabine d'enregistrement confortable et parfaitement insonorisée ainsi qu'un espace détente 
+                    convivial pour accueillir vos sessions dans les meilleures conditions. 
+                    Le tout est complété par un équipement audio haut de gamme, garantissant une 
+                    qualité sonore professionnelle à chaque étape de votre projet.
+                </p>
+
+                <a class="studio-button" href="#">Réserver</a>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="studio-container">
+                <div class="studio-text">
+                    <h2>La cabine</h2>
+                    <p>Notre cabine d'enregistrement, spacieuse et entièrement traitée acoustiquement avec des panneaux Vicoustic et des bass traps GIK Acoustics, garantit une neutralité sonore optimale. Elle est équipée de micros de référence tels que le Neumann U87 et le Shure SM7B, offrant une restitution fidèle et chaleureuse des voix comme des instruments. L'éclairage réglable et la ventilation silencieuse assurent un confort maximal lors de longues sessions.</p>
+                </div>
+                <div class="studio-img">
+                    <img src="../res/studio-cabine.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="studio-container">
+                 <div class="studio-img">
+                    <img src="../res/studio-salon.jpg" alt="">
+                </div>
+                <div class="studio-text">
+                    <h2>L'espace salon</h2>
+                    <p>Notre cabine d'enregistrement, spacieuse et entièrement traitée acoustiquement avec des panneaux Vicoustic et des bass traps GIK Acoustics, garantit une neutralité sonore optimale. Elle est équipée de micros de référence tels que le Neumann U87 et le Shure SM7B, offrant une restitution fidèle et chaleureuse des voix comme des instruments. L'éclairage réglable et la ventilation silencieuse assurent un confort maximal lors de longues sessions.</p>
+                </div>
+               
+            </div>
+
+            <div class="studio-container">
+                <div class="studio-text">
+                    <h2>La régis</h2>
+                    <p>Notre cabine d'enregistrement, spacieuse et entièrement traitée acoustiquement avec des panneaux Vicoustic et des bass traps GIK Acoustics, garantit une neutralité sonore optimale. Elle est équipée de micros de référence tels que le Neumann U87 et le Shure SM7B, offrant une restitution fidèle et chaleureuse des voix comme des instruments. L'éclairage réglable et la ventilation silencieuse assurent un confort maximal lors de longues sessions.</p>
+                </div>
+                <div class="studio-img">
+                    <img src="../res/studio-regis.jpg" alt="">
+                </div>
+            </div>
+        </section>
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RCN Studio - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
