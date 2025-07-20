@@ -1,61 +1,39 @@
+:root {
+    --main-bg: #fff;
+    --main-color: #111;
+    --primary: #2D082A;
+    --primary-light: #3e0b3f;
+    --text-light: #f6f6f6;
+    --font-title: 'Montserrat', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #111;
+    background-color: var(--main-bg);
+    color: var(--main-color);
 }
 
+/* === Typography === */
 h1, h2, h3,
 .header a,
 .title-a h1,
 .studio-button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-title);
     font-weight: 700;
 }
 
 /* === Header === */
-.hamburger {
-    display: none;
-    font-size: 32px;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    width: 32px;
-    height: 2px;
-    background-color: #f6f6f6;
-    margin-bottom: 3px;
-    border-radius: 1px;
-    transition: transform 0.4s ease, opacity 0.3s ease;
-    transform-origin: center;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-6px);
-}
-
-
-.nav-menu {
-    display: flex;
-}
-
-
 .header {
-    background-color: #2D082A;
+    background-color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -68,6 +46,38 @@ h1, h2, h3,
     height: 80px;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: var(--text-light);
+    margin-bottom: 3px;
+    border-radius: 1px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+.nav-menu {
+    display: flex;
+}
+
 .header ul {
     list-style: none;
     display: flex;
@@ -78,7 +88,7 @@ h1, h2, h3,
 
 .header a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--text-light);
     font-size: 28px;
     transition: opacity 0.3s ease;
 }
@@ -87,7 +97,7 @@ h1, h2, h3,
     opacity: 0.8;
 }
 
-/* === Intro section === */
+/* === Intro Section === */
 .intro {
     position: relative;
     z-index: 0;
@@ -130,7 +140,7 @@ h1, h2, h3,
 }
 
 .subtitle a {
-    color: #f6f6f6;
+    color: var(--text-light);
     text-decoration: none;
 }
 
@@ -138,11 +148,11 @@ h1, h2, h3,
     text-decoration: underline;
 }
 
-/* === Bouton === */
+/* === Bouton principal === */
 .studio-button {
     display: inline-block;
-    background-color: #2D082A;
-    color: #FFFFFF;
+    background-color: var(--primary);
+    color: var(--text-light);
     font-size: 20px;
     font-weight: 500;
     padding: 16px 32px;
@@ -152,29 +162,28 @@ h1, h2, h3,
 }
 
 .studio-button:hover {
-    background-color: #3e0b3f;
+    background-color: var(--primary-light);
 }
 
 /* === Sections supplémentaires === */
 .title-b {
-    color: #f6f6f6;
+    color: var(--text-light);
     padding: 45px;
     max-width: 800px;
 }
 
 .description {
-    color: #f6f6f6;
+    color: var(--text-light);
     padding: 40px;
     max-width: 800px;
     margin-top: -40px;
 }
 
-/* === Responsive tablette (≤ 1024px) === */
+/* === Responsive tablette === */
 @media (max-width: 1024px) {
     .header {
         flex-direction: column;
         height: auto;
-        padding: 20px;
         gap: 20px;
     }
 
@@ -213,7 +222,7 @@ h1, h2, h3,
     }
 }
 
-/* === Responsive mobile (≤ 768px) === */
+/* === Responsive mobile === */
 @media (max-width: 768px) {
     .intro {
         padding: 60px 16px;
@@ -266,7 +275,6 @@ h1, h2, h3,
         flex-direction: column;
         align-items: center;
         gap: 12px;
-        padding: 0;
     }
 
     .header img {
@@ -278,5 +286,3 @@ h1, h2, h3,
         padding: 8px 0;
     }
 }
-
-
