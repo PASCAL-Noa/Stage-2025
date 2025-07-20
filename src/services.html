@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOS SERVIES</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Manrope:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="../res/icon.png" alt="Logo RCN Studio" />
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menu principal">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="#studio">Le Studio</a></li>
+                <li><a href="#services">Nos Services</a></li>
+                <li><a href="#enregistrement">Enregistrement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="home" aria-labelledby="title-rcn">
+            <div class="title-a">
+                <h1 id="title-rcn">NOS SERVICES</h1>
+            </div>
+        </section>
+
+       
+        <section>
+            <h2 style="text-align: center;">Notre savoir faire au service de votre exigence</h2>
+            <div class="container-services">
+                <div class="service">
+                    <img src="../res/service-enregistrement.jpg" alt="">
+                    <h3>Enregistrement studio</h3>
+                    <p>Notre studio offre une acoustique parfaite et du matériel haut de gamme pour donner vie à votre musique. Enregistrez, créez, vibrez.</p>
+                </div>
+
+                <div class="service">
+                    <img src="../res/service-mixage.jpg" alt="">
+                    <h3>Mixage professionnel</h3>
+                    <p>Sublimez votre musique. Grâce à un mixage précis et équilibré, nous révélons toute la richesse de vos enregistrements. Un rendu propre, puissant, prêt pour la scène ou le streaming.</p>
+                </div>
+
+                <div class="service">
+                    <img src="../res/service-mastering.jpg" alt="">
+                    <h3>Mastering</h3>
+                    <p>La touche finale de votre projet. Nous optimisons la dynamique, l'équilibre tonal et le volume pour un son homogène, puissant et adapté à tous les supports. Un rendu pro, prêt à être diffusé partout.</p>
+                </div>
+            </div>
+        </section>   
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RCN Studio - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
