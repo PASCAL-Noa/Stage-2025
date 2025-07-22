@@ -98,15 +98,14 @@ h1, h2, h3,
     opacity: 0.8;
 }
 
+
 /* === Intro Section === */
 .intro {
     position: relative;
     z-index: 0;
     overflow: hidden;
 
-    width: 100%;
-    height: 750px;
-
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,21 +113,24 @@ h1, h2, h3,
     gap: 40px;
     padding: 100px 20px;
 
-    background-image: url("../res/Studio-header.jpg");
+    background-image:
+        linear-gradient(rgba(45, 8, 42, 0.6), rgba(45, 8, 42, 0.6)),
+        url("../res/Studio-header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.intro::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(45, 8, 42, 0.6);
-    z-index: -1;
+.intro header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
-.title-a h1 {
+/* === Titre principal === */
+.intro h1 {
     font-size: 64px;
     margin: 0;
     color: #fff;
@@ -137,6 +139,7 @@ h1, h2, h3,
     border-radius: 8px;
 }
 
+/* === Adresse === */
 .subtitle {
     font-size: 24px;
     padding: 16px 32px;
@@ -163,24 +166,21 @@ h1, h2, h3,
     border-radius: 12px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-top: 30px;
 }
 
 .studio-button:hover {
     background-color: var(--primary-light);
 }
 
-/* === Sections supplémentaires === */
-.title-b {
-    color: var(--text-light);
-    padding: 45px;
-    max-width: 800px;
-}
-
+/* === Articles de contenu === */
+.title-b,
 .description {
     color: var(--text-light);
-    padding: 40px;
+    padding: 30px 20px;
     max-width: 800px;
-    margin-top: -40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
 }
 
 /* === NOS SERVICES === */
@@ -233,14 +233,12 @@ h1, h2, h3,
     align-items: stretch;
     justify-content: center;
     gap: 0;
-    margin: 40px 0;
-    flex-wrap: wrap; /* utile pour le responsive */
+    flex-wrap: wrap; 
 }
 
 .studio-text {
     flex: 1;
     background-color: white;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,6 +247,11 @@ h1, h2, h3,
 .studio-text h2 {
     margin-top: 0;
     font-size: 28px;
+    padding: 0 40px;
+}
+
+.studio-text p {
+    padding: 0 40px;
 }
 
 .studio-img {
@@ -267,8 +270,45 @@ h1, h2, h3,
     display: block;
 }
 
+.studio-materiel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.studio-materiel h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.contents h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contents ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+
+
 /* === Responsive tablette === */
 @media (max-width: 1024px) {
+
+    /* === Home page === */
     .header {
         flex-direction: column;
         height: auto;
@@ -286,61 +326,49 @@ h1, h2, h3,
     }
 
     .title-a h1 {
-        font-size: 48px;
-        padding: 16px 32px;
+        font-size: 32px;
+        padding: 10px 20px;
     }
 
     .subtitle {
-        font-size: 20px;
-        padding: 12px 24px;
+        font-size: 16px;
+        padding: 8px 16px;
     }
 
     .studio-button {
-        font-size: 18px;
+        font-size: 16px;
         padding: 12px 24px;
     }
 
-    .title-b h3 {
-        font-size: 20px;
-    }
-
+       .title-b,
     .description {
-        font-size: 16px;
-        padding: 32px;
+        padding: 20px;
+        font-size: 14px;
     }
 }
 
 /* === Responsive mobile === */
 @media (max-width: 768px) {
-    .intro {
-        padding: 60px 16px;
-        gap: 24px;
-    }
 
-    .title-a h1 {
-        font-size: 36px;
-        padding: 12px 24px;
+    /* Home page === */
+    .intro h1 {
+        font-size: 40px;
+        padding: 16px 24px;
     }
 
     .subtitle {
         font-size: 18px;
-        padding: 10px 20px;
+        padding: 12px 20px;
     }
 
     .studio-button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .title-b h3 {
         font-size: 18px;
-        padding: 0 16px;
+        padding: 12px 24px;
     }
 
+    .title-b,
     .description {
-        font-size: 14px;
-        padding: 24px;
-        margin-top: -20px;
+        padding: 20px 15px;
     }
 
     .hamburger {
@@ -372,5 +400,62 @@ h1, h2, h3,
     .header a {
         font-size: 20px;
         padding: 8px 0;
+    }
+
+
+    /* === Studio === */
+    .studio-container {
+        flex-direction: column;
+    }
+
+    .studio-text,
+    .studio-img {
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .studio-text h2 {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    .studio-text p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .studio-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .studio-container.reverse {
+        flex-direction: column-reverse;
+    }
+
+    /* === Studio - Matériel === */
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .studio-materiel {
+        padding: 20px 10px;
+        margin-top: -20px;
+    }
+
+    .studio-materiel h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .contents h3 {
+        font-size: 18px;
+    }
+
+    .contents ul {
+        font-size: 15px;
     }
 }
