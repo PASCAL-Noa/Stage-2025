@@ -82,7 +82,7 @@ h1, h2, h3,
 .header ul {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 48px;
     margin: 0;
     padding: 0;
 }
@@ -90,7 +90,7 @@ h1, h2, h3,
 .header a {
     text-decoration: none;
     color: var(--text-light);
-    font-size: 28px;
+    font-size: 24px;
     transition: opacity 0.3s ease;
 }
 
