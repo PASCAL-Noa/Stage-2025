@@ -189,7 +189,7 @@ h1, h2, h3,
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
-    background-color: #f5f5f5; /* moins agressif que rouge */
+    background-color: #f5f5f5; 
     padding: 40px 20px;
 }
 
@@ -197,12 +197,18 @@ h1, h2, h3,
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 300px;
+    max-width: 300px;
     text-align: center;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
     gap: 16px;
+}
+
+.service p {
+    font-size: 16px;
+    padding: 0px 20px;
+
 }
 
 .service img {
