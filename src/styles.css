@@ -741,6 +741,109 @@ h1, h2, h3,
     background-color: var(--primary-light);
 }
 
+/* === Mentions Section === */
+.mentions-section {
+    background-color: #292930;
+    padding: 100px 20px;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* === Card === */
+.mentions-card {
+    position: relative;
+    background: linear-gradient(135deg, #1b1b1b, #2d2d2d);
+    padding: 24px 32px;
+    display: flex;
+    gap: 40px;
+    border-radius: 14px;
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* === Metallic brushed effect === */
+.mentions-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.15) 50%,
+        transparent 70%
+    );
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mentions-card:hover::before {
+    transform: translateX(100%) translateY(0) rotate(25deg);
+}
+
+.mentions-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.01);
+}
+
+/* === Head (left column) === */
+.mentions-card-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.mentions-card-head img {
+    width: 250px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.mentions-card-head span {
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+}
+
+/* === Description (right column) === */
+.mentions-card-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+.mentions-card-desc h2 {
+    font-size: 60px;
+    margin: 100px 0 100px;
+    color: gold;
+}
+
+/* === Info inside desc (if any links) === */
+.mentions-card-info span a {
+    text-decoration: none;
+    color: gold;
+}
+
+
 
 /* === Responsive tablette === */
 @media (max-width: 1024px) {
@@ -1041,6 +1144,22 @@ h1, h2, h3,
 
     .footer {
         padding-bottom: 30%; 
+    }
+
+    .mentions-card {
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 0px;
+    }
+
+    .mentions-card-head img {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .mentions-card-desc h2 {
+        font-size: 36px;
+        margin: auto;
     }
 
 }
