@@ -387,6 +387,7 @@ h1, h2, h3,
     justify-content: space-between;
     width: 90%;
     padding: 60px;
+    gap: 30px;
 }
 
 .prix-head {
