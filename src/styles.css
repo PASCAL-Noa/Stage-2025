@@ -692,6 +692,56 @@ h1, h2, h3,
   z-index: 1;
 }
 
+.qui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.qui p {
+    max-width: 1050px;
+}
+
+.pourquoi {
+    background-color: #292930;
+    color: var(--text-light);
+    padding: 20px;
+}
+
+.pourquoi h2 {
+    text-align: center;
+}
+
+.pourquoi li {
+    list-style: none;
+    margin-left: -40px;
+}
+
+.pourquoi h3, .pourquoi ul {
+    margin-left: 25%;
+}
+
+.pourquoi-mention {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.pourquoi a {
+    text-decoration: none;
+    color: var(--text-light);
+    display: inline-block;
+    text-align: center;
+    padding: 10px 16px;
+    background-color: #2D082A; 
+}
+
+.pourquoi a:hover {
+    background-color: var(--primary-light);
+}
+
+
 /* === Responsive tablette === */
 @media (max-width: 1024px) {
 
